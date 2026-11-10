@@ -1,0 +1,317 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <h2>Dash<span>Board</span></h2>
+
+      <p class="menu-label">MAIN MENU</p>
+
+      <nav class="sidebar-menu">
+        <a href="#dashboard" class="active">▦ Dashboard</a>
+        <a href="#users">♟ Users</a>
+        <a href="#reports">▤ Reports</a>
+        <a href="#products">▣ Products</a>
+        <a href="#settings">⚙ Settings</a>
+      </nav>
+    </aside>
+
+    <!-- SIDEBAR BACKDROP -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+
+      <div class="header-title">
+        <button
+          type="button"
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <div>
+          <p class="welcome">Welcome back!</p>
+          <h1>Dashboard Overview</h1>
+        </div>
+      </div>
+
+      <div class="header-actions">
+
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Search orders..."
+          aria-label="Search orders"
+        >
+
+        <button
+          type="button"
+          id="notificationBtn"
+          class="icon-button"
+          aria-label="View notifications"
+        >
+          ♧
+        </button>
+
+        <button
+          type="button"
+          id="themeToggle"
+          class="icon-button theme-button"
+          aria-label="Switch to dark mode"
+        >
+          🌙
+        </button>
+
+        <span class="avatar">SN</span>
+
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="dashboard">
+
+      <!-- PAGE INTRODUCTION -->
+      <section class="page-intro">
+        <div>
+          <h2>Overview</h2>
+          <p>Here is what's happening with your business today.</p>
+        </div>
+
+        <button type="button" id="downloadReport" class="download-btn">
+          + Download Report
+        </button>
+      </section>
+
+      <!-- STATISTICS -->
+      <section class="stats">
+
+        <div class="stat-card">
+          <h3>Total Revenue</h3>
+          <p>$24,680</p>
+          <small class="positive">↑ 12.8% from last month</small>
+        </div>
+
+        <div class="stat-card">
+          <h3>Total Users</h3>
+          <p>8,549</p>
+          <small class="positive">↑ 8.2% from last month</small>
+        </div>
+
+        <div class="stat-card">
+          <h3>Total Orders</h3>
+          <p>1,245</p>
+          <small class="positive">↑ 5.6% from last month</small>
+        </div>
+
+        <div class="stat-card">
+          <h3>Conversion Rate</h3>
+          <p>6.84%</p>
+          <small class="negative">↓ 1.2% from last month</small>
+        </div>
+
+      </section>
+
+      <!-- ANALYTICS -->
+      <section class="analytics" id="reports">
+
+        <div class="panel">
+          <h2>Revenue Overview</h2>
+          <p>Monthly revenue performance</p>
+
+          <div class="revenue-bars">
+
+            <div class="bar-item">
+              <span>$30k</span>
+              <div class="bar" style="height: 120px;"></div>
+              <small>Jun</small>
+            </div>
+
+            <div class="bar-item">
+              <span>$25k</span>
+              <div class="bar" style="height: 95px;"></div>
+              <small>Jul</small>
+            </div>
+
+            <div class="bar-item">
+              <span>$20k</span>
+              <div class="bar" style="height: 75px;"></div>
+              <small>Aug</small>
+            </div>
+
+            <div class="bar-item">
+              <span>$28k</span>
+              <div class="bar" style="height: 110px;"></div>
+              <small>Sep</small>
+            </div>
+
+            <div class="bar-item">
+              <span>$32k</span>
+              <div class="bar" style="height: 140px;"></div>
+              <small>Oct</small>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- RECENT ACTIVITY -->
+        <div class="panel" id="activity">
+          <h2>Recent Activity</h2>
+          <p>Latest updates</p>
+
+          <div class="activity-item">
+            <span class="activity-icon">+</span>
+            <div>
+              <strong>New user registered</strong>
+              <p>Sarah joined the platform</p>
+              <small>5 minutes ago</small>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <span class="activity-icon">✓</span>
+            <div>
+              <strong>Payment received</strong>
+              <p>Payment of $250 received</p>
+              <small>20 minutes ago</small>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <span class="activity-icon">↗</span>
+            <div>
+              <strong>New order placed</strong>
+              <p>Order #1003 was placed</p>
+              <small>1 hour ago</small>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- USERS -->
+      <section class="content-section" id="users">
+        <h2>Users</h2>
+        <p>Manage your registered users.</p>
+
+        <div class="simple-card">
+          <h3>8,549 Registered Users</h3>
+          <p>Sarah, John, Mary and other users are registered on your platform.</p>
+        </div>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section class="content-section" id="products">
+        <h2>Products</h2>
+        <p>Manage your available products.</p>
+
+        <div class="product-list">
+
+          <div class="simple-card">
+            <h3>Product A</h3>
+            <p>Price: $50</p>
+            <p>Status: Available</p>
+          </div>
+
+          <div class="simple-card">
+            <h3>Product B</h3>
+            <p>Price: $80</p>
+            <p>Status: Available</p>
+          </div>
+
+          <div class="simple-card">
+            <h3>Product C</h3>
+            <p>Price: $120</p>
+            <p>Status: Out of stock</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section class="content-section" id="settings">
+        <h2>Settings</h2>
+        <p>Manage your dashboard preferences.</p>
+
+        <div class="simple-card">
+          <label for="adminName">Admin name</label>
+
+          <input
+            type="text"
+            id="adminName"
+            value="Admin"
+            placeholder="Enter admin name"
+          >
+
+          <button type="button" id="saveSettings" class="download-btn">
+            Save Settings
+          </button>
+
+          <p id="settingsMessage" role="status"></p>
+        </div>
+      </section>
+
+      <!-- RECENT ORDERS -->
+      <section class="orders" id="orders">
+        <h2>Recent Orders</h2>
+
+        <table id="ordersTable">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Order ID</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Amount</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Sarah</td>
+              <td>#1001</td>
+              <td>Nov 10</td>
+              <td><span class="status completed">Completed</span></td>
+              <td>$250</td>
+            </tr>
+
+            <tr>
+              <td>John</td>
+              <td>#1002</td>
+              <td>Nov 09</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>$150</td>
+            </tr>
+
+            <tr>
+              <td>Mary</td>
+              <td>#1003</td>
+              <td>Nov 08</td>
+              <td><span class="status completed">Completed</span></td>
+              <td>$320</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p id="noResults" hidden>No matching orders found.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
